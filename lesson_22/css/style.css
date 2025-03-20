@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  padding: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: royalblue;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+}
+.post_title {
+  color: red;
+  text-align: center;
+}
+.post_content {
+  color: blue;
+  text-align: center;
+}
+.post_reactions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.post_reactions_dislikes {
+  color: red;
+}
+.post_list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+.post_list li {
+  color: gray;
+}
+.post_list li.active {
+  color: green;
+}
+
+.p_1 {
+  color: red;
+  text-align: center;
+  font-size: 24px;
+}
+
+.span_1 {
+  color: red;
+  text-align: center;
+  font-size: 24px;
+}
+
+.avatar_1 {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: green;
+}
+
+.avatar_2 {
+  width: 150px;
+  height: 150px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: blue;
+  border-radius: 50%;
+}
+
+.my-list {
+  margin-left: 50px;
+}
+.my-list .my-item-1 {
+  color: green;
+}
+.my-list .my-item-2 {
+  color: green;
+}
+.my-list .my-item-3 {
+  color: green;
+}
+.my-list .my-item-4 {
+  color: green;
+}
+.my-list .my-item-5 {
+  color: green;
+}
+
+.avatar_2 {
+  width: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
