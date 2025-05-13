@@ -1,0 +1,4 @@
+wappalyzer
+spa - 
+https://react.dev/
+https://vite.dev/

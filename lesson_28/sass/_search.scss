@@ -1,16 +1,13 @@
 .search-container {
-    padding: 24px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .search-box {
-        width: 600px;
-        padding: 12px 24px;
-        border: none;
-        border-radius: 25px;
-    }
-
-    //grid-template-columns: repeat(auto, 250px);
+  .search-box {
+    width: 600px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+  }
 }
-

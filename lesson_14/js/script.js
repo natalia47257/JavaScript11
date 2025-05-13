@@ -39,7 +39,7 @@
 //     console.log(error);
 //   })
  
-// Написать функцию (getUserById) которая получает первым параметром id пользователья, вторым параметром callback функцию (которая выводит в консоли "firstName", "lastName" и "email"), и вызывает эту функцию на ответе запроса
+// Написать функцию (getUserById) которая получает первым параметром id пользователя, вторым параметром callback функцию (которая выводит в консоли "firstName", "lastName" и "email"), и вызывает эту функцию на ответе запроса
 // 'https://dummyjson.com/users/1'
 // Адрес 'https://dummyjson.com/users/${id пользователья}'
 // function getUserById(userId, callback) {...}

@@ -1,109 +1,113 @@
 // sass: preprocessor css 
+
 @use "variables" as vars;
-@use "variablesV2" as varsV2;
+@use "variables_2" as vars2;
 @use "mixins" as mx;
-//@import "_variables.sccs";
-//@import "variables";
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-// БЭМ
+
 .post {
-    padding: 50px;
-    //border: 1px solid royalblue;
-
-    // border-width: 1px;
-    // border-style: solid;
-    // border-color: royalblue;
-
-    border: {
-        width: 1px;
-        style: solid;
-        color: royalblue;
+  &_reactions {
+    &_dislikes {
+      color: vars.$color_1;
     }
 
-    width: 80%;
-    margin: 0 auto;
+    @include mx.d-flex;
+  }
 
-    // font: {
-     //   weight: bold;
-     //   size: 24px;
-// }
-    &_title {
-        color: vars.$color_1;
-        text-align: vars.$textPosition;
+  &_list {
+    @include mx.d-flex(space-evenly, center, row);
+
+    li {
+      color: gray;
+
+      &.active {
+        color: green;
+      }
     }
+  }
 
-    &_content {
-        color: vars.$color_2;
-        text-align: vars.$textPosition;
-    }
-    padding: 50px;
+  padding: 50px;
 
-    &_reactions {
-        &_dislikes {
-            color: vars.$color_1;
-        }
-        @include mx.d-flex;
-    }
+  // border: 1px solid royalblue;
 
-    &_list {
-        @include mx.d-flex(space-evenly, center, row);
-        li {
-            color: gray;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-color: royalblue;
 
-        &.active {
-             color: green;   
-            }
-        }
-    }
+  border: {
+    width: 1px;
+    style: dotted;
+    color: royalblue;
+  }
+
+  width: 80%;
+  margin: 0 auto;
+  // font: {
+  //   weight: bold;
+  //   size: 24px;
+  // }
+
+  &_title {
+    color: vars2.$color_1;
+    text-align: vars.$textPosition;
+  }
+
+  &_content {
+    color: vars.$color_2;
+    text-align: vars.$textPosition;
+  }
 }
 
 .p_1 {
-    color: vars.$color_1;
-    text-align: center;
-    font-size: 24px;
+  color: vars.$color_1;
+  text-align: center;
+  font-size: 24px;
 }
+
 %text-styles {
-    color: vars.$color_1;
-    text-align: center;
-    font-size: 24px;
+  display: block;
+  color: vars.$color_1;
+  text-align: center;
+  font-size: 24px;
 }
-// .span_1 {
-//     font-weight: boldex;
-//     @extend %p_1
-// }
+
 .span_1 {
-    @extend %text-styles;
+  font-weight: bolder;
+  @extend %text-styles;
 }
+
 .avatar_1 {
-    @include mx.avatar;
+  @include mx.avatar;
 }
 
 .avatar_2 {
-    @include mx.avatar(150px, 3px, blue, true);
+  @include mx.avatar(150px, 3px, blue, true);
 }
-.my-list {
-    margin-left: 50px;
 
-    @for $i from 1 through 5 {
-        .my-item-#{$i} {
-            // .my-item-1
-            // .my-item-2
-            color: green;
-        }
-    } 
+.my-list {
+  margin-left: 50px;
+
+  @for $i from 1 through 5 {
+    .my-item-#{$i} {
+      // .my-item-1
+      // .my-item-2
+      color: green;
+    }
+  }
 }
 
 @function square($n) {
-    $result:$n * $n;
-    @return $result
+  $result: $n * $n;
+  @debug $result;
+  @return $result
 }
 
 .avatar_2 {
-    width: #{square(10)}px;
-    // border: #{square(2)}px solid red;
+  width: #{square(10)}px;
+  // border: #{square(2)}px solid red;
 }
-//https://www.figma.com/design/uZJy4g7QU2VN23vKC0sS81/Untitled?node-id=0-1&p=f&t=QYFyz4cuznkoDeSE-0

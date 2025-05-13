@@ -22,51 +22,56 @@ let product = {
     favorite: false
 }
 
-// Проверка сохраненных данных в localStorage
-if (localStorage.getItem("product")) {
-    product = JSON.parse(localStorage.getItem("product"));
-}
+const btnPlus = document.querySelector(".plus");
+const btnMinus = document.querySelector(".minus");
+const counterElem = document.querySelector(".span")
+const btnStar = document.querySelector(".star")
+//-------------------------------------------------------
+// // Проверка сохраненных данных в localStorage
+// if (localStorage.getItem("product")) {
+//     product = JSON.parse(localStorage.getItem("product"));
+// }
 
-// Функция сохранения данных в localStorage
-function saveToLocalStorage() {
-    localStorage.setItem("product", JSON.stringify(product));
-}
+// // Функция сохранения данных в localStorage
+// function saveToLocalStorage() {
+//     localStorage.setItem("product", JSON.stringify(product));
+// }
 
-// Функция, которая обеспечивает  увеличение значения count на 1 при клике на кнопку  "+".
+// // Функция, которая обеспечивает  увеличение значения count на 1 при клике на кнопку  "+".
 
-function increaseCount() {
-    product.count ++;
-    saveToLocalStorage();
-    console.log(`Количество увеличено: ${product.count}`)
-}
-// Функция, которая обеспечивает уменьшение значения count на 1 при клике на кнопку 
-//  "-".
-function decreaseCount() {
-    if (product.count > 0) {
-        product.count --;
-        saveToLocalStorage();
-        console.log(`Количество уменьшено: ${product.count}`)
-    } else {
-        console.log("Количество не может быть отрицательным");
-    }
-}
+// function increaseCount() {
+//     product.count ++;
+//     saveToLocalStorage();
+//     console.log(`Количество увеличено: ${product.count}`)
+// }
+// // Функция, которая обеспечивает уменьшение значения count на 1 при клике на кнопку 
+// //  "-".
+// function decreaseCount() {
+//     if (product.count > 0) {
+//         product.count --;
+//         saveToLocalStorage();
+//         console.log(`Количество уменьшено: ${product.count}`)
+//     } else {
+//         console.log("Количество не может быть отрицательным");
+//     }
+// }
 
-// Функция, которая меняет значение favorite  при клике на звездочку изменить значение "favorite" на противоположное значение.
-function toggleFavorite() {
-    product.favorite = !product.favorite;
-    saveToLocalStorage();
-    console.log(`Favorite: ${product.favorite} ? "Yes" : "No"`);
-}
-console.log("Текущее состояние продукта:", product);
-increaseCount(); // Увеличиваем количество
-decreaseCount(); // Уменьшаем количество
-toggleFavorite(); // Изменяем статус "Избранное"
-console.log("Обновлённое состояние продукта:", product);
+// // Функция, которая меняет значение favorite  при клике на звездочку изменить значение "favorite" на противоположное значение.
+// function toggleFavorite() {
+//     product.favorite = !product.favorite;
+//     saveToLocalStorage();
+//     console.log(`Favorite: ${product.favorite} ? "Yes" : "No"`);
+// }
+// console.log("Текущее состояние продукта:", product);
+// increaseCount(); // Увеличиваем количество
+// decreaseCount(); // Уменьшаем количество
+// toggleFavorite(); // Изменяем статус "Избранное"
+// console.log("Обновлённое состояние продукта:", product);
 
-// Связывание кнопок с функциями
-document.getElementById("increase-button").addEventListener("click", increaseCount);
-document.getElementById("decrease-button").addEventListener("click", decreaseCount);
-document.getElementById("favorite").addEventListener("click", toggleFavorite);
+// // Связывание кнопок с функциями
+// document.getElementById("increase-button").addEventListener("click", increaseCount);
+// document.getElementById("decrease-button").addEventListener("click", decreaseCount);
+// document.getElementById("favorite").addEventListener("click", toggleFavorite);
 
-// Начальное состояние продукта
-console.log("Начальное состояние продукта:", product);
+// // Начальное состояние продукта
+// console.log("Начальное состояние продукта:", product)

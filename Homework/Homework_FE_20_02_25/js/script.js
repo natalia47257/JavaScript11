@@ -261,3 +261,5 @@ class BankAccount {
   } catch (error) {
     console.error(error.message); // Обработка ошибок
   }
+
+  

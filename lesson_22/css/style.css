@@ -7,19 +7,10 @@
 .post {
   padding: 50px;
   border-width: 1px;
-  border-style: solid;
+  border-style: dotted;
   border-color: royalblue;
   width: 80%;
   margin: 0 auto;
-  padding: 50px;
-}
-.post_title {
-  color: red;
-  text-align: center;
-}
-.post_content {
-  color: blue;
-  text-align: center;
 }
 .post_reactions {
   display: flex;
@@ -42,6 +33,14 @@
 .post_list li.active {
   color: green;
 }
+.post_title {
+  color: pink;
+  text-align: center;
+}
+.post_content {
+  color: blue;
+  text-align: center;
+}
 
 .p_1 {
   color: red;
@@ -50,9 +49,14 @@
 }
 
 .span_1 {
+  display: block;
   color: red;
   text-align: center;
   font-size: 24px;
+}
+
+.span_1 {
+  font-weight: bolder;
 }
 
 .avatar_1 {

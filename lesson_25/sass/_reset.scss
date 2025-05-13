@@ -1,16 +1,13 @@
-
-@use "variables" as vars; 
-
+@use "variables" as vars;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    background-color: vars.$primary-color;
-    color: vars.$secondary-color;
-    font-family: 'Roboto';
+  background-color: vars.$primary-color;
+  color: vars.$secondary-color;
+  font-family: 'Roboto';
 }
