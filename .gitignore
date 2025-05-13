@@ -1,0 +1,26 @@
+# Логи
+logs
+.log
+npm-debug.log
+
+# Зависимости
+node_modules/
+**/node_modules/
+
+# Сборка
+dist/
+build/
+
+# Конфиги среды
+.env
+*.local
+
+# Редакторы
+.vscode/
+.idea/
+.DS_Store
+
+# VS/Windows
+*.suo
+*.njsproj
+*.sln
